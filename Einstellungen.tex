@@ -5,55 +5,55 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[						                  %Dokumentenklassendefinition
-	fontsize=11pt,					                  %Schriftgröße 
-	paper=a4,						                      %Seitenformat
-	bibliography=totoc, 			                %Literaturverzeichnis im Inhaltsverzeichnis anzeigen
-	listof=totoc, 					                  %(Tabellen- &) Abbildungsverzeichnis im Inhaltsverzeichnis anzeigen
-	parskip=half,					                    %Abstand zwischen Absätzen
+\documentclass[				%Dokumentenklassendefinition
+	fontsize=11pt,			%Schriftgröße 
+	paper=a4,			%Seitenformat
+	bibliography=totoc, 		%Literaturverzeichnis im Inhaltsverzeichnis anzeigen
+	listof=totoc, 			%(Tabellen- &) Abbildungsverzeichnis im Inhaltsverzeichnis anzeigen
+	parskip=half,			%Abstand zwischen Absätzen
 	]{scrreprt}						
 
 \usepackage[utf8]{inputenc}			
 \usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}			            %Spracheinstellung für neue deutsche Rechtschreibung
+\usepackage[ngerman]{babel}		%Spracheinstellung für neue deutsche Rechtschreibung
 \usepackage{geometry}				
-\usepackage{newtxtext} 				              %eine an Times New Roman angelehnte Schriftart
-\usepackage{graphicx, subfig}		            %erweiterte Möglichkeiten Bilder einzufügen und zu bearbeiten
-\usepackage{chngcntr}				                %Zähler manipulieren
+\usepackage{newtxtext} 			%eine an Times New Roman angelehnte Schriftart
+\usepackage{graphicx, subfig}		%erweiterte Möglichkeiten Bilder einzufügen und zu bearbeiten
+\usepackage{chngcntr}			%Zähler manipulieren
 \counterwithout{footnote}{chapter}
-\usepackage[onehalfspacing]{setspace}       %1,5-facher Zeilenabstand
-\usepackage{nameref} 				                %um mit \nameref einen Kapiteltitel zu referenzieren
-\usepackage[hyphens]{url} 			            %explizites Laden vom Paket url (!vor biblatex und href!) um die Option zur Trennung an Bindestrichen zu setzen (alternatives Paket breakurl)
-\usepackage[german=guillemets]{csquotes}    %Paket für Zitate mit Option zur Nutzung von Guillemets im Deutschen
+\usepackage[onehalfspacing]{setspace}   %1,5-facher Zeilenabstand
+\usepackage{nameref} 			%um mit \nameref Kapiteltitel zu referenzieren
+\usepackage[hyphens]{url} 		%explizites Laden vom Paket url (!vor biblatex und href!) um die Option zur Trennung an Bindestrichen zu setzen (alternatives Paket breakurl)
+\usepackage[german=guillemets]{csquotes}%Paket für Zitate mit Option zur Nutzung von Guillemets im Deutschen
 
-\usepackage[	backend=biber, 			          %in Optionen -> Texmaker konfigurieren Bib(la)tex auf "biber %"
+\usepackage[	backend=biber, 		%in Optionen -> Texmaker konfigurieren Bib(la)tex auf "biber %"
 			style=authoryear-icomp,
 			sorting=nyt,
-			isbn=false, 				                  %keine ISBN im Literaturverzeichnis
-			ibidpage=true, 			                  %ebd. auf gleicher Seite
-			ibidtracker=constrict, 	              %nur wenn in vorhergender Fußnote erwähnt
-			maxbibnames = 99,		                  %Anzeige von bis zu 99 Autorennamen im Literaturverzeichnis
+			isbn=false, 			%keine ISBN im Literaturverzeichnis
+			ibidpage=true, 			%ebd. auf gleicher Seite
+			ibidtracker=constrict, 	        %nur wenn in vorhergender Fußnote erwähnt
+			maxbibnames = 99,		%Anzeige von bis zu 99 Autorennamen im Literaturverzeichnis
 			]{biblatex}
 			
-\addbibresource{Literatur.bib}		          %Einlesen der Datei mit den Literaturdaten		
+\addbibresource{Literatur.bib}		%Einlesen der Datei mit den Literaturdaten		
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Individualisierung der Literaturangaben
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DefineBibliographyStrings{ngerman}{	      %Text bei URLs ändern (Standard: besucht am)
+\DefineBibliographyStrings{ngerman}{	%Text bei URLs ändern (Standard: besucht am)
   urlseen = {zuletzt aufgerufen am}
 }
 
-\setlength\bibnamesep{1.5\itemsep}	        %Länge zwischen zwei Einträgen verschiedener Autoren
+\setlength\bibnamesep{1.5\itemsep}	%Länge zwischen zwei Einträgen verschiedener Autoren
 	% genauso möglich für
 	% \bibitemsep für Abstand zwischen zwei verschiedenen Einträgen
 	% \bibinitsep für Abstand zwischen zwei Einträgen von Autoren mit unterschiedlichem Anfangsbuchstaben
 
-\DefineBibliographyStrings{german}%	        %Anzeige von "et al." statt "u.a." bei vielen Autor:innen
+\DefineBibliographyStrings{german}%	%Anzeige von "et al." statt "u.a." bei vielen Autor:innen
 	{andothers={et\addabbrvspace al\adddot}}
 
-\urlstyle{same}						                  %URLs werden in der gleiche Schrift wie der Rest ausgegeben
+\urlstyle{same}				%URLs werden in der gleiche Schrift wie der Rest ausgegeben
 
 
 
@@ -61,8 +61,8 @@
 % Weitere individuelle Anpassungen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\usepackage{showframe}				              %Anzeige des Seitenlayouts zur Überprüfung der Einstellungen
-%\usepackage{blindtext}				              %Zur Verwendung von "Dummy-Text" mit \blindtext, \Blindtext oder \Blinddocument
+%\usepackage{showframe}			%Anzeige des Seitenlayouts zur Überprüfung der Einstellungen
+%\usepackage{blindtext}			%Zur Verwendung von "Dummy-Text" mit \blindtext, \Blindtext oder \Blinddocument
 
 % Seitenzahlen rechts unten
 \usepackage[autooneside=true]{scrlayer-scrpage}
@@ -83,14 +83,14 @@
 
 
 % Tiefe der Nummerierung der Abschnitte und im Toc
-\setcounter{secnumdepth}{3}			            %Nummerierungstiefe der Abschnitte
-\setcounter{tocdepth}{3}				            %Auswertungstiefe des Inhaltsverzeichnisses
+\setcounter{secnumdepth}{3}		%Nummerierungstiefe der Abschnitte
+\setcounter{tocdepth}{3}		%Auswertungstiefe des Inhaltsverzeichnisses
 
 
-\usepackage[%						                    %PDF-Metadaten für Titel und Autor:in
+\usepackage[%				%PDF-Metadaten für Titel und Autor:in
 	pdftitle={Titel der Bachelorarbeit}, 
 	pdfauthor={Verfasser:in}]
-	{hyperref}						                    %hyperref Paket sollte zur Kompatibilität möglichst als letztes geladen werden
+	{hyperref}			%hyperref Paket sollte zur Kompatibilität möglichst als letztes geladen werden
 
 
 
@@ -103,15 +103,15 @@
 \begin{document}
 \include{Titelblatt}
 \newgeometry{left=2.5cm,right=3.5cm,top=2.5cm,bottom=2.5cm}
-\pagenumbering{gobble}				              %Ohne Seitenzahlen
+\pagenumbering{gobble}			%Ohne Seitenzahlen
 %\include{Abstract} \newpage
-\tableofcontents \newpage			              %Inhaltsverzeicnis
+\tableofcontents \newpage		%Inhaltsverzeicnis
 \cleardoubleoddpage
-\pagenumbering{arabic}				              %Seitenzahlen mit arabischen Ziffern
+\pagenumbering{arabic}			%Seitenzahlen mit arabischen Ziffern
 %\include{Hauptteil}\newpage
-\printbibliography \newpage 			          %Literaturverzeichnis
-%\listoffigures \newpage				            %Abbildungsverzeichnis
-\pagenumbering{Roman}				                %Seitenzahlen mit großen römischen Ziffern
+\printbibliography \newpage 		%Literaturverzeichnis
+%\listoffigures \newpage		%Abbildungsverzeichnis
+\pagenumbering{Roman}			%Seitenzahlen mit großen römischen Ziffern
 \include{Erklaerung} \newpage
 \include{Vereinbarung}
 \end{document}
